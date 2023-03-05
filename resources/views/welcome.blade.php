@@ -8,8 +8,8 @@
     <title>Manoover</title>
 </head>
 <body>
-    <h1 class="text-red-500">
-        ayam kampus enak wkwkwk
+    <h1 class="text-blue-500">
+        ayam kampus enak banget
     </h1>
 </body>
 </html>
