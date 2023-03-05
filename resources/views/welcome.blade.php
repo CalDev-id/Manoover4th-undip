@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 class="text-red-500">
-        ayam kampus wkwkwk
+        ayam kampus enak wkwkwk
     </h1>
 </body>
 </html>
