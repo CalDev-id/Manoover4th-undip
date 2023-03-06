@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Manoover</title>
+    <title>Login</title>
 
     <style>
         #email {
@@ -49,7 +49,7 @@
                         <p class="self-center text-white">Remember Me</p>
                     </div>
                     <button
-                        class="bg-gradient-to-r from-[#4C6BFF] to-[#8D47FE] text-white w-full py-2 rounded-full font-semibold">
+                        class="bg-gradient-to-r from-primary to-secondary text-white w-full py-2 rounded-full font-semibold">
                         Sign in
                     </button>
                 </form>
