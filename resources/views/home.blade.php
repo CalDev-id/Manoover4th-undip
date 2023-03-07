@@ -85,7 +85,7 @@
     <footer style="background-image: url('/images/footer.jpg'); background-position: center; background-size: cover"
         class="md:hero md:h-[374px]">
         <div id="hero" class="container flex justify-between flex-col md:flex-row py-20 md:py-0">
-            <div class="text-center w-fit">
+            <div class="text-center w-fit mx-auto md:mx-0">
                 <img src="/images/logo.svg" class="mx-auto" alt="">
                 <h1 class="text-white font-semibold text-2xl">The 4th Manoover</h1>
                 <p class="text-white">Harmony of the sea</p>
