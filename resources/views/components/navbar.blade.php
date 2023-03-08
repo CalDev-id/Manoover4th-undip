@@ -16,19 +16,19 @@
                               class="font-semibold text-white py-10 mx-8 flex md:py-2 self-center">Home</a>
                       </li>
                       <li class="group">
-                          <a href="artikel.php"
+                          <a href="#about"
                               class="text-base text-white py-10 mx-8 flex font-semibold group-hover:text-primary md:py-2">About us</a>
                       </li>
                       <li class="group">
-                          <a href="penjualan.php"
+                          <a href="/events"
                               class="text-base text-white py-10 mx-8 flex font-semibold group-hover:text-primary md:py-2">Events</a>
                       </li>
                       <li class="group">
-                          <a href="editPage.php"
+                          <a href="#timeline"
                               class="text-base text-white py-10 mx-8 flex font-semibold group-hover:text-primary md:py-2">Timeline</a>
                       </li>
                       <li class="group">
-                          <a href="editPage.php"
+                          <a href="#sponsors"
                               class="text-base text-white py-10 mx-8 flex font-semibold group-hover:text-primary md:py-2">Sponsors</a>
                       </li>
                       {{-- @auth
