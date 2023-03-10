@@ -37,19 +37,41 @@
                 <h1 class="font-bold text-2xl text-center mb-5 text-white">
                     Login To Your Account
                 </h1>
-                <form action="" class="w-full justify-center mb-2">
+                 @if (session()->has('success'))
+                <div class="alert alert-success shadow-lg">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        <span>{{ session('success') }}</span>
+                    </div>
+                </div>
+                @elseif(session()->has('loginError'))
+                <div class="alert alert-warning shadow-lg">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        <span>{{ session('loginError') }}</span>
+                    </div>
+                </div>
+                @elseif(session()->has('not_login'))
+                <div class="alert alert-info shadow-lg">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        <span>{{ session('not_login') }}</span>
+                    </div>
+                </div>
+                @endif
+                <form action="/login" method="post" class="w-full justify-center mb-2 mt-2">
+                    @csrf
                     <input type="email" name="email" id="email" placeholder="Email"
-                        class="rounded-2xl py-3 px-10 w-full border-none text-black bg-slate-100 mb-5 focus:outline-green-500" />
-
-                    <input type="Password" name="Password" id="Password" placeholder="Password"
-                        class="rounded-2xl py-3 px-10 w-full text-black border-none bg-slate-100 focus:outline-green-500" />
+                        class="rounded-2xl py-3 px-10 w-full border-none text-black bg-slate-100 mb-5 focus:outline-green-500" required/>
+                    <input type="password" name="password" id="Password" placeholder="Password"
+                        class="rounded-2xl py-3 px-10 w-full text-black border-none bg-slate-100 focus:outline-green-500" required/>
                     <div class="flex mt-5 mb-5">
                         <input type="checkbox" name="" id=""
                             class="border-green-600 self-center mr-5 rounded-sm focus:outline-none" />
                         <p class="self-center text-white">Remember Me</p>
                     </div>
                     <button
-                        class="bg-gradient-to-r from-primary to-secondary text-white w-full py-2 rounded-full font-semibold">
+                        class="bg-gradient-to-r from-primary to-secondary text-white w-full py-2 rounded-full font-semibold" type="submit">
                         Sign in
                     </button>
                 </form>
@@ -70,7 +92,9 @@
                         <img src="/images/facebooklogo.svg" alt="" class="w-7" />
                     </div>
                     <div class="px-6 py-3 border rounded-xl">
-                        <img src="/images/GoogleLogo.svg" alt="" class="w-7" />
+                        <a href="{{ route('google.redirect') }}">
+                            <img src="/images/GoogleLogo.svg" alt="" class="w-7" />
+                        </a>
                     </div>
                     <div class="px-6 py-3 border rounded-xl">
                         <img src="/images/appleLogo.png" alt="" class="w-7" />
