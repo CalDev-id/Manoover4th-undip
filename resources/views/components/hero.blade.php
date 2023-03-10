@@ -1,4 +1,4 @@
-<div style="background-image: url('/images/3602762.jpg'); background-position: center; background-size: cover" class="hero h-screen">
+<div style="background-image: url('/images/3602761.jpg'); background-position: center; background-size: cover" class="hero h-screen">
     <div id="hero" class="container text-center">
         <div class="flex justify-center">
             <img src="/images/logo.svg" class="" alt="">
